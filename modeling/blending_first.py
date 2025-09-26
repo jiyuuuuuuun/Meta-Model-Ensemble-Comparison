@@ -5,11 +5,28 @@ from sklearn.ensemble import RandomForestClassifier
 from lightgbm import LGBMClassifier
 from sklearn.metrics import classification_report, roc_auc_score, average_precision_score
 
+# # 전처리 함수 불러오기
+# from preprocessing import load_and_preprocess_data
+
+# # 데이터 로드
+# X_train, X_test, y_train, y_test = load_and_preprocess_data()
+
+# # 전처리 함수 불러오기
+# from preprocessing import load_and_preprocess_data
+
+# # 데이터 로드
+# X_train, X_test, y_train, y_test = load_and_preprocess_data()
+
+
+import pandas as pd
 # 전처리 함수 불러오기
 from preprocessing import load_and_preprocess_data
 
-# 데이터 로드
-X_train, X_test, y_train, y_test = load_and_preprocess_data()
+print("전처리된 데이터를 불러옵니다...")
+X_train = pd.read_csv('train_features.csv')
+y_train = pd.read_csv('train_target.csv').squeeze() # squeeze()로 Series 변환
+X_test = pd.read_csv('test_features.csv')
+y_test = pd.read_csv('test_target.csv').squeeze()
 
 # --- 블렌딩 모델 구현 ---
 print("\n--- 블렌딩 모델 학습 및 평가 (ROC-AUC Score, AUPRC) ---")

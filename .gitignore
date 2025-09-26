@@ -1,0 +1,45 @@
+# Python auto-generated
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Logs
+*.log
+
+# Data (모든 csv 무시)
+*.csv
+
+# Models
+*.pkl
+
+# Exceptions: 꼭 올리고 싶은 결과 파일만 허용
+!blending_model_results.csv
+!stacking_model_results.csv
+
+# Virtual environments
+venv/
+env/
+.venv/
+pycaret-env/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# IDE/Editor
+.vscode/
+.idea/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Build/distribution
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Temporary files
+*.tmp
+*.out

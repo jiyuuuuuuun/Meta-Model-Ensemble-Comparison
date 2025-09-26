@@ -40,4 +40,14 @@ def load_and_preprocess_data(file_path="Final Transactions.csv"):
     print(f"학습 데이터 형태: {X_train.shape}")
     print(f"테스트 데이터 형태: {X_test.shape}")
 
+    
+    # 3. 전처리된 데이터를 파일로 저장
+    print("전처리된 데이터를 파일로 저장합니다...")
+    X_train.to_csv('train_features.csv', index=False)
+    y_train.to_csv('train_target.csv', index=False)
+    X_test.to_csv('test_features.csv', index=False)
+    y_test.to_csv('test_target.csv', index=False)
+
+    print("저장 완료")
+
     return X_train, X_test, y_train, y_test
